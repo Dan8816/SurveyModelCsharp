@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Submitted Data";
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<style>
+        .container{
+            background: red;
+            margin-top: 10%;
+        }
+    </style>-->
+
+</head>
+<body>
+    <h2>@ViewData["Title"]</h2>
+    <h3>@ViewData["Message"]</h3>
+
+@model Survey.Models.Ninja
+
+    <div class="container">         
+        <form>
+            <div class="form-group">
+                <label>Your Name: @Model.Name</label>
+            </div>
+            <div class="form-group">
+                <label for="sel1">Location: @Model.Location</label>
+            </div>
+            <div class="form-group">
+                <label for="sel1">Favorite Language: @Model.Language</label>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment (optional):@Model.Comment
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
