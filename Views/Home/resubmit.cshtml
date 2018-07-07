@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Resubmit Page";
+}
+@using Survey.Models
+@model Ninja
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+    <form asp-action="submit" asp-controller="Home" method="post">
+        <div class="form-group">
+            <span asp-validation-for="Name"></span>
+            <label asp-for="Name">Your Name:</label>
+            <input type="text" name="Name" class="form-control">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Location"></span>
+            <label asp-for="Location">Location:</label>
+            <input type="text" name="Location" class="form-control">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Language"></span>
+            <label asp-for="Language">Language:</label>
+            <input type="text" name="Language" class="form-control">
+        </div>
+        <div class="form-group">
+                <span asp-validation-for="Comment"></span>
+                <label asp-for="Comment">Comment (optional):</label>
+                <textarea class="form-control" rows="5" cols="30" name="Comment"></textarea>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
+</body>

@@ -30,4 +30,5 @@ C:\Users\Administrator\Desktop\Dans_Git_Folder\c_sharp_stack\FullStackASP\Survey
 C:\Users\Administrator\Desktop\Dans_Git_Folder\c_sharp_stack\FullStackASP\Survey\obj\Debug\netcoreapp2.1\Survey.dll
 C:\Users\Administrator\Desktop\Dans_Git_Folder\c_sharp_stack\FullStackASP\Survey\obj\Debug\netcoreapp2.1\Survey.pdb
 C:\Users\Administrator\Desktop\Dans_Git_Folder\c_sharp_stack\FullStackASP\Survey\obj\Debug\netcoreapp2.1\Survey.csproj.CopyComplete
-C:\Users\Administrator\Desktop\Dans_Git_Folder\c_sharp_stack\FullStackASP\Survey\obj\Debug\netcoreapp2.1\Razor\Views\Home\submit.g.cshtml.cs
+C:\Users\Administrator\Desktop\Dans_Git_Folder\c_sharp_stack\FullStackASP\survey\obj\Debug\netcoreapp2.1\Razor\Views\Home\submitted.g.cshtml.cs
+C:\Users\Administrator\Desktop\Dans_Git_Folder\c_sharp_stack\FullStackASP\survey\obj\Debug\netcoreapp2.1\Razor\Views\Home\resubmit.g.cshtml.cs

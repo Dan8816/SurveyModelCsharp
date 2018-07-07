@@ -9,19 +9,14 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/css/style.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--<style>
-        .container{
-            background: red;
-            margin-top: 10%;
-        }
-    </style>-->
 
 </head>
 <body>
     <h2>@ViewData["Title"]</h2>
     <h3>@ViewData["Message"]</h3>
 
-@model Survey.Models.Ninja
+@using Survey.Models
+@model Ninja
 
     <div class="container">         
         <form>

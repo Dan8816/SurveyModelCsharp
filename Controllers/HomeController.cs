@@ -10,31 +10,31 @@ namespace Survey.Controllers
 {
     public class HomeController : Controller
     {
+
+        [HttpGet]
+        [Route("")]
         public IActionResult Index()
         {
-            return View("index");
+            return View();
         }
-
-        [HttpPost]     
-        [Route("/submit")]    
-        public IActionResult Submit(string Name, string Location, string Language, string Comment)
+    
+        public IActionResult Submit(Ninja thisNinja)
         {
-            ViewData["Message"] = "Thanks you for you submitted data!";
-            Ninja thisNinja = new Ninja()
+            if(ModelState.IsValid)
             {
-                Name = Name,
-                Location = Location,
-                Language = Language,
-                Comment = Comment,
-            };
-            return View(thisNinja);
+                return RedirectToAction("Success", thisNinja);
+            }
+            else
+            {
+                return View("resubmit", thisNinja);
+            }
         }
 
-        public IActionResult About()
+        public IActionResult Success(Ninja thisNinja)
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Thanks for submitting.";
 
-            return View("submit");
+            return View("submitted", thisNinja);
         }
 
         public IActionResult Contact()

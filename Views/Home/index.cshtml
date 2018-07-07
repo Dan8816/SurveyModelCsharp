@@ -1,38 +1,36 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<!DOCTYPE html>
+@using Survey.Models
+@model Ninja
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@ViewData["Title"]</title>   
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 <body>
-<div class="container">
-    <form action="/submit" method="post">
+
+    <form asp-action="Submit" asp-controller="Home" method="post">
         <div class="form-group">
-            <label for="Name">Your Name:</label>
+            <span asp-validation-for="Name"></span>
+            <label asp-for="Name">Your Name:</label>
             <input type="text" name="Name" class="form-control">
         </div>
         <div class="form-group">
-            <label for="sel1">Location:</label>
-                <select  name="Location" class="form-control">
-                    <option value="seattle">Seattle</option>
-                    <option value="dc">DC</option>
-                    <option value="tulsa">Tulsa</option>
-                    <option value="dallas">Dallas</option>
-                </select>        
+            <span asp-validation-for="Location"></span>
+            <label asp-for="Location">Location:</label>
+            <input type="text" name="Location" class="form-control">
         </div>
         <div class="form-group">
-            <label for="sel1">Favorite Language:</label>
-                <select  name="Language" class="form-control">
-                    <option value="python">Python</option>
-                    <option value="c#">C#</option>
-                    <option value="html/css">html/css</option>
-                    <option value="javascript">javascript</option>
-                </select>
+            <span asp-validation-for="Language"></span>
+            <label asp-for="Language">Language:</label>
+            <input type="text" name="Language" class="form-control">
         </div>
         <div class="form-group">
                 <label for="comment">Comment (optional):</label>
@@ -40,8 +38,8 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
-</div>
 </body>
+</html>
 
 <!--<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
